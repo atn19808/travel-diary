@@ -6,7 +6,7 @@ function Logo() {
   return (
     <Link>
       <img
-        src="/src/assets/logo.jpg"
+        src="/src/assets/logo.png"
         alt="TravelDiary logo"
         className={styles.logo}
       />

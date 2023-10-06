@@ -9,10 +9,20 @@ const formatDate = (date) =>
     year: "numeric",
   }).format(new Date(date));
 
+// USED TO CONVERT COUNTRY CODE TO FLAG EMOJI
+// Doesn't work on newest version of chrome
+// function getFlagEmoji(countryCode) {
+//   const codePoints = countryCode
+//     .toUpperCase()
+//     .split("")
+//     .map((char) => 127397 + char.charCodeAt());
+//   return String.fromCodePoint(...codePoints);
+// }
+
 function CityItem({ city }) {
   const { currentCity, deleteCity } = useCities();
   const { cityName, emoji, date, id, position } = city;
-
+  console.log(emoji);
   function handleClick(e) {
     e.preventDefault();
 
@@ -24,7 +34,7 @@ function CityItem({ city }) {
     <li>
       <Link
         className={`${styles.cityItem} ${
-          id === currentCity.id ? styles["cityItem-active"] : ""
+          id === currentCity.id ? styles["cityItem--active"] : ""
         }`}
         to={`${id}?lat=${position.lat}&lng=${position.lng}`}
       >
