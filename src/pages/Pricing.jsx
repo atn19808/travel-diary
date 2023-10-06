@@ -16,10 +16,7 @@ export default function Product() {
           </h2>
           <p>Get started on your travel diary today.</p>
         </div>
-        <img
-          src="src/assets/price.jpg"
-          alt="overview of a large city with skyscrapers"
-        />
+        <img src="/price.jpg" alt="overview of a large city with skyscrapers" />
       </section>
     </main>
   );
